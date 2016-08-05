@@ -8,5 +8,5 @@ RUN apk add --update gcc-java
 RUN mkdir $APP_DIR
 RUN mkdir $OUTPUT_DIR
 ADD plantuml.8046.jar $APP_DIR/plantuml.jar
-ENTRYPOINT java -jar $APP_DIR/plantuml.jar -output $OUTPUT_DIR
+ENTRYPOINT gij -jar $APP_DIR/plantuml.jar -output $OUTPUT_DIR
 
