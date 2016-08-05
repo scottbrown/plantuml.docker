@@ -16,3 +16,6 @@ release:
 	docker push scottbrown/plantuml:latest
 	docker push scottbrown/plantuml:$(PLANTUML_VERSION)
 
+shell:
+	docker run --rm -it -v $(PWD):/output --entrypoint ash plantuml
+
